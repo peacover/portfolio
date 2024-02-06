@@ -15,10 +15,6 @@ export const NavbarItems: TNavbarItem[] = [
   },
   {
     title: "Testimonials",
-    path: "/#testimonials",
-  },
-  {
-    title: "Contact",
-    path: "/#contact",
+    path: "/testimonials",
   },
 ];
