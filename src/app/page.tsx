@@ -1,6 +1,5 @@
 import HeroProfile from "@/components/Home/HeroProfile";
-import Image from "next/image";
-
+import Navbar from "@/components/Navbar/Navbar";
 export default function Home() {
   return (
     // <div>Home</div>
