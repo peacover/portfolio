@@ -1,6 +1,6 @@
 "use client";
 
-import { NavbarItems } from "@/constants/navbar";
+import { NavbarItems } from "@/lib/constants/navbar";
 import Link from "next/link";
 import { ModeToggle } from "./ModeToggle";
 import light_logo from "../../../public/Logos/light_logo.svg";
@@ -51,7 +51,7 @@ const Navbar = () => {
                   <li
                     key={index}
                     className={cn(
-                      "text-xl py-5 text-center border-b-2 hover:bg-secondary lg:border-b-0 lg:px-6",
+                      "text-xl py-3 text-center border-b-2 rounded-md hover:bg-secondary lg:border-b-0 lg:px-5",
                       index === 0 && isNavbarOpen ? "border-t-2" : ""
                     )}
                   >
@@ -79,7 +79,7 @@ const Navbar = () => {
           <div
             className={cn(
               "lg:hidden",
-              isNavbarOpen ? "bg-black absolute top-10 m-[3rem]" : "block"
+              isNavbarOpen ? "absolute top-4 m-[3rem] right-[3rem]" : "block"
             )}
           >
             <Button

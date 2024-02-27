@@ -2,6 +2,10 @@ import { TNavbarItem } from "@/lib/types/navbarItems";
 
 export const NavbarItems: TNavbarItem[] = [
   {
+    title: "Home",
+    path: "/",
+  },
+  {
     title: "About",
     path: "/about",
   },
@@ -16,5 +20,5 @@ export const NavbarItems: TNavbarItem[] = [
   {
     title: "Testimonials",
     path: "/testimonials",
-  },
+  }
 ];

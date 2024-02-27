@@ -18,7 +18,7 @@ const HeroProfile = () => {
         <div className="row-start-2 md:row-auto">
           <h1
             color="blue-gray"
-            className="mb-4 lg:text-5xl !leading-tight text-3xl"
+            className="mb-4 text-3xl !leading-tight md:text-4xl lg:text-5xl"
           >
             {HeroProfileContent.title}
           </h1>
