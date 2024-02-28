@@ -5,6 +5,7 @@ import Footer from "@/components/Footer/Footer";
 import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/utils/theme-provider";
+import ScrollToTopButton from "@/components/utils/ScrollToTopButton";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -39,6 +40,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
+          <ScrollToTopButton />
           <Footer />
         </ThemeProvider>
       </body>
