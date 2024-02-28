@@ -1,4 +1,4 @@
-import { TNavbarItem } from "@/lib/types/navbarItems";
+import { TNavbarItem } from "@/lib/types/NavbarItems";
 
 export const NavbarItems: TNavbarItem[] = [
   {

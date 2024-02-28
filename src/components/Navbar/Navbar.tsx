@@ -22,7 +22,7 @@ const Navbar = () => {
   }, []);
   if (!mounted) return <></>;
   return (
-    <div className="py-2 px-4 md:px-8 fixed top-0 left-0 right-0 z-10 backdrop-blur-lg">
+    <div className="py-2 px-4 md:px-8 fixed top-0 left-0 right-0 z-10 backdrop-blur-2xl dark:bg-secondary/65">
       <div className="flex justify-between items-center md:px-4">
         {!isNavbarOpen && (
           <Link href="/">
@@ -47,7 +47,7 @@ const Navbar = () => {
           <ul className="h-screen flex flex-col justify-center lg:h-0 lg:flex-row lg:items-center">
             {NavbarItems.map((item, index) => {
               return (
-                <Link href={item.path} legacyBehavior passHref>
+                <Link key={index} href={item.path} legacyBehavior passHref>
                   <li
                     key={index}
                     className={cn(
