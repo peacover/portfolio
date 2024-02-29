@@ -1,4 +1,4 @@
-import { TNavbarItem } from "@/lib/types/NavbarItems";
+import { TNavbarItem } from "@/lib/types/TNavBar";
 
 export const NavbarItems: TNavbarItem[] = [
   {
@@ -14,8 +14,8 @@ export const NavbarItems: TNavbarItem[] = [
     path: "/projects",
   },
   {
-    title: "Blog",
-    path: "/blog",
+    title: "Blogs",
+    path: "/blogs",
   },
   {
     title: "Testimonials",

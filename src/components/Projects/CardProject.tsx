@@ -1,4 +1,4 @@
-import { TProject } from "@/lib/types/ProjectItems";
+import { TProject } from "@/lib/types/TProject";
 import {
   Card,
   CardContent,

@@ -1,16 +1,16 @@
-import projects from "@/lib/constants/projects";
-import CardProject from "./CardProject";
+import { TBlogPath } from "@/lib/types/TBlog";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { TProjectPath } from "@/lib/types/TProject";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { blogs } from "@/lib/constants/blogs";
+import CardBlog from "./CardBlog";
 
-const ListProjects = ({ path }: TProjectPath) => {
-  return (
-    <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {projects.map((project, index) => {
+const ListBlogs = ({ path }: TBlogPath) => {
+    return (
+        <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {blogs.map((blog, index) => {
         if (index > 2 && path === "Home") return null;
-        return <CardProject key={index} project={project} />;
+        return <CardBlog key={index} blog={blog} />;
       })}
       <div className="col-span-3 flex justify-center">
         <Button
@@ -18,14 +18,14 @@ const ListProjects = ({ path }: TProjectPath) => {
           className="p-5 mt-14 text-secondary text-white dark:text-black text-md bg-accent rounded-full"
           variant={"link"}
         >
-          <Link href="/projects">
+          <Link href="/blogs">
             See More
             <FaArrowRightLong className="inline ml-2" />
           </Link>
         </Button>
       </div>
     </div>
-  );
+    );
 };
 
-export default ListProjects;
+export default ListBlogs;
