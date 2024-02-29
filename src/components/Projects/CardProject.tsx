@@ -13,19 +13,17 @@ import Link from "next/link";
 
 const CardProject = ({ project }: { project: TProject }, key: number) => {
   return (
-    <Card key={key} className="flex flex-col h-full">
-      <div className="">
-        <Image
-          src={project.image}
-          alt={project.name}
-          width="0"
-          height="0"
-          sizes="100vw"
-          className="w-full h-[250px] rounded-t-md object-cover"
-          priority={true}
-          aria-label={project.name}
-        />
-      </div>
+    <Card key={key} className="flex flex-col">
+      <Image
+        src={project.image}
+        alt={project.name}
+        width="0"
+        height="0"
+        sizes="100vw"
+        className="w-full rounded-t-md object-cover"
+        priority={true}
+        aria-label={project.name}
+      />
       <CardHeader className="flex flex-col flex-grow">
         <CardTitle>{project.name}</CardTitle>
         <CardDescription>
