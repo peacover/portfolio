@@ -6,6 +6,7 @@ import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/utils/theme-provider";
 import ScrollToTopButton from "@/components/utils/ScrollToTopButton";
+import { TracingBeam } from "@/components/ui/tracing-beam";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -39,7 +40,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          {children}
+          <TracingBeam>{children}</TracingBeam>
           <ScrollToTopButton />
           <Footer />
         </ThemeProvider>
