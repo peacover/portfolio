@@ -1,6 +1,7 @@
 import { imageConfigDefault } from "next/dist/shared/lib/image-config";
+import { TProject } from "../types/TProject";
 
-const projects = [
+const projects : TProject[] = [
   {
     name: "Project 1",
     description:

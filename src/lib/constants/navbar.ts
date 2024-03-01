@@ -1,6 +1,6 @@
 import { TNavbarItem } from "@/lib/types/TNavBar";
 
-export const NavbarItems: TNavbarItem[] = [
+export const NavbarItems : TNavbarItem[] = [
   {
     title: "Home",
     path: "/",

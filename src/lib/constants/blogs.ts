@@ -1,4 +1,6 @@
-export const blogs = [
+import { TBlog } from "../types/TBlog";
+
+export const blogs : TBlog[] = [
     {
         name: "How to use React",
         description: "A guide to using React",
