@@ -30,7 +30,7 @@ const ScrollToTopButton: React.FC = () => {
   return (
     <div className="fixed bottom-8 right-8">
       {isVisible && (
-        <button onClick={scrollToTop} className="p-4 bg-accent rounded-full">
+        <button onClick={scrollToTop} className="p-4 bg-accent rounded-full text-white dark:text-black">
           <FaArrowUp />
         </button>
       )}

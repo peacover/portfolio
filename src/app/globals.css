@@ -1,27 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
 @layer base {
   :root {
     --card: 200 63% 100%;
     --ring: 200 28% 29%;
     --input: 200 9% 94%;
     --muted: 320 39% 92%;
-    --accent: 80 28% 29%;
+    --accent: 320 28% 29%;
     --border: 200 9% 94%;
     --popover: 200 63% 100%;
     --primary: 200 28% 29%;
-    --secondary: 320 28% 29%;
+    --secondary: 420 28% 80%;
     --background: 200 63% 100%;
     --foreground: 200 71% 5%;
     --destructive: 11 87% 37%;
     --card-foreground: 200 71% 5%;
     --muted-foreground: 320 9% 38%;
-    --accent-foreground: 0 0% 100%;
+    --accent-foreground: 320 28% 40%;
     --popover-foreground: 200 71% 5%;
-    --primary-foreground: 200 28% 89%;
-    --secondary-foreground: 320 28% 89%;
+    --primary-foreground: 200 28% 80%;
+    --secondary-foreground: 420 28% 89%;
     --destructive-foreground: 11 87% 97%;
     --radius: 0.5rem;
   }
@@ -31,20 +31,20 @@
     --ring: 200 28% 29%;
     --input: 200 9% 11%;
     --muted: 320 39% 8%;
-    --accent: 80 28% 29%;
+    --accent: 320 28% 40%;
     --border: 200 9% 11%;
     --popover: 200 36% 1%;
     --primary: 200 28% 29%;
-    --secondary: 320 28% 29%;
+    --secondary: 420 28% 89%;
     --background: 200 36% 1%;
     --foreground: 200 30% 100%;
     --destructive: 11 87% 48%;
     --card-foreground: 200 30% 100%;
     --muted-foreground: 320 9% 62%;
-    --accent-foreground: 0 0% 100%;
+    --accent-foreground: 320 28% 29%;
     --popover-foreground: 200 30% 100%;
     --primary-foreground: 200 28% 89%;
-    --secondary-foreground: 320 28% 89%;
+    --secondary-foreground: 420 28% 80%;
     --destructive-foreground: 0 0% 100%;
   }
 }

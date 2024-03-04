@@ -19,7 +19,7 @@ const SkillsSection = () => {
                 alt={skill.title}
                 className="w-16 h-16"
               />
-              <span className="text-secondary">{skill.title}</span>
+              <span className="dark:text-black">{skill.title}</span>
             </div>
           );
         })}

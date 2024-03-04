@@ -1,6 +1,7 @@
 import { Button } from "../ui/button";
 import profile from "../../../public/Profile/youssef.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const HeroProfileContent = {
   title: "Welcome to my Web Development Portofolio!",
@@ -22,13 +23,15 @@ const HeroProfile = () => {
           >
             {HeroProfileContent.title}
           </h1>
-          <div className="mb-4 !text-gray-500 md:pr-16 xl:pr-28">
+          <div className="mb-4 text-primary dark:text-primary-foreground md:pr-16 xl:pr-28">
             <p>{HeroProfileContent.description}</p>
           </div>
           <div className="grid">
             <div className="mb-2 flex w-full flex-col gap-4 md:w-10/12 md:flex-row">
-              <Button className="w-full px-4 md:w-[8rem]">About</Button>
-              <Button variant="secondary" className="w-full px-4 md:w-[8rem]">
+              <Button asChild className="p-5 text-md">
+                <Link href="/about">About</Link>
+              </Button>
+              <Button variant={"secondary"} className="p-5 text-md">
                 Download CV
               </Button>
             </div>

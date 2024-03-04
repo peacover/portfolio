@@ -18,7 +18,7 @@ const ListBlogs = ({ path }: TBlogPath) => {
         {path === "Home" && (
           <Button
             asChild
-            className="p-5 mt-14 text-secondary text-white dark:text-black text-md bg-accent rounded-full"
+            className="p-5 mt-14 text-secondary text-white dark:text-black text-md bg-secondary rounded-full"
             variant={"link"}
           >
             <Link href="/blogs">

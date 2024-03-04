@@ -22,7 +22,7 @@ const Navbar = () => {
   }, []);
   if (!mounted) return <></>;
   return (
-    <nav className="py-2 px-4 md:px-8 fixed top-0 left-0 right-0 z-10 backdrop-blur-2xl dark:bg-secondary/65">
+    <nav className="py-2 px-4 md:px-8 fixed top-0 left-0 right-0 z-10 backdrop-blur-2xl dark:bg-primary/65">
       <div className="flex justify-between items-center md:px-4">
         {!isNavbarOpen && (
           <Link href="/">
@@ -51,7 +51,7 @@ const Navbar = () => {
                   <li
                     key={index}
                     className={cn(
-                      "text-xl py-3 text-center border-b-2 rounded-md hover:bg-secondary lg:border-b-0 lg:px-5",
+                      "text-xl py-3 text-center border-b-2 rounded-md hover:bg-secondary dark:hover:bg-primary lg:border-b-0 lg:px-5",
                       index === 0 && isNavbarOpen ? "border-t-2" : ""
                     )}
                   >
