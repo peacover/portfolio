@@ -18,7 +18,7 @@ export const TracingBeam = ({
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
-    target: ref,
+    // target: ref,
     offset: ["start start", "end start"],
   });
 
@@ -51,17 +51,11 @@ export const TracingBeam = ({
       ref={ref}
       className={cn("relative w-full mx-auto h-full", className)}
     >
-      <div className="absolute -left-1 md:-left-30 px-5 top-3">
+      <div className="absolute -right-1 md:-right-30 pr-9 top-3">
         <motion.div
           transition={{
             duration: 0.2,
             delay: 0.5,
-          }}
-          animate={{
-            boxShadow:
-              scrollYProgress.get() > 0
-                ? "none"
-                : "rgba(0, 0, 0, 0.24) 0px 3px 8px",
           }}
           className="ml-[27px] h-4 w-4 rounded-full border border-netural-200 shadow-sm flex items-center justify-center"
         >
@@ -70,20 +64,14 @@ export const TracingBeam = ({
               duration: 0.2,
               delay: 0.5,
             }}
-            animate={{
-              backgroundColor:
-                scrollYProgress.get() > 0 ? "white" : "var(--emerald-500)",
-              borderColor:
-                scrollYProgress.get() > 0 ? "white" : "var(--emerald-600)",
-            }}
-            className="h-2 w-2  rounded-full border border-neutral-300 bg-white"
+            className="h-2 w-2 rounded-full border border-neutral-300 bg-primary"
           />
         </motion.div>
         <svg
           viewBox={`0 0 20 ${svgHeight}`}
-          width="20"
-          height={svgHeight} // Set the SVG height
-          className=" ml-4 block"
+          width={`20`}
+          height={`${svgHeight}`}
+          className={`ml-4 block`}
           aria-hidden="true"
         >
           <motion.path

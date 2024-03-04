@@ -2,7 +2,7 @@
 
 import CardTestimonial from "./CardTestimonial";
 // import { testimonials } from "@/lib/constants/testimonials";
-import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
+import { InfiniteMovingCards } from "../utils/infinite-moving-cards";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
