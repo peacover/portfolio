@@ -42,8 +42,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <TracingBeam>{children}</TracingBeam>
-          {/* {children} */}
+          {/* <TracingBeam>{children}</TracingBeam> */}
+          {children}
           <ScrollToTopButton />
           <Footer />
         </ThemeProvider>

@@ -3,7 +3,11 @@ import SectionWrapper from "../utils/SectionWrapper";
 
 const ContactSection = () => {
   return (
-    <SectionWrapper title="Contact" className="bg-primary-foreground">
+    <SectionWrapper
+      id="contact"
+      title="Contact"
+      className="bg-primary-foreground"
+    >
       <ContactCard />
     </SectionWrapper>
   );

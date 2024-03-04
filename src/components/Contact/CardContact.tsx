@@ -26,33 +26,31 @@ const ContactCard = () => {
             Feel free to contact me
           </h2>
         </CardHeader>
-        <CardContent>
-          <div className="">
-            <div className="space-y-4">
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                <div className="space-y-2">
-                  <Label htmlFor="first-name">First name</Label>
-                  <Input id="first-name" placeholder="Enter your first name" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="last-name">Last name</Label>
-                  <Input id="last-name" placeholder="Enter your last name" />
-                </div>
+        <CardContent className="text-black">
+          <div className="space-y-4">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+              <div className="space-y-2">
+                <Label htmlFor="first-name">First name</Label>
+                <Input id="first-name" placeholder="Enter your first name" />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" placeholder="Enter your email" type="email" />
+                <Label htmlFor="last-name">Last name</Label>
+                <Input id="last-name" placeholder="Enter your last name" />
               </div>
-              <div className="space-y-2">
-                <Label htmlFor="message">Message</Label>
-                <Textarea
-                  className="min-h-[100px]"
-                  id="message"
-                  placeholder="Enter your message"
-                />
-              </div>
-              <Button>Send message</Button>
             </div>
+            <div className="space-y-2">
+              <Label htmlFor="email">Email</Label>
+              <Input id="email" placeholder="Enter your email" type="email" />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="message">Message</Label>
+              <Textarea
+                className="min-h-[100px]"
+                id="message"
+                placeholder="Enter your message"
+              />
+            </div>
+            <Button>Send message</Button>
           </div>
         </CardContent>
       </Card>

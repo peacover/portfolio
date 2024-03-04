@@ -22,7 +22,7 @@ const Navbar = () => {
   }, []);
   if (!mounted) return <></>;
   return (
-    <div className="py-2 px-4 md:px-8 fixed top-0 left-0 right-0 z-10 backdrop-blur-2xl dark:bg-secondary/65">
+    <nav className="py-2 px-4 md:px-8 fixed top-0 left-0 right-0 z-10 backdrop-blur-2xl dark:bg-secondary/65">
       <div className="flex justify-between items-center md:px-4">
         {!isNavbarOpen && (
           <Link href="/">
@@ -71,7 +71,7 @@ const Navbar = () => {
             )}
             onClick={(e) => e.preventDefault()}
           >
-            <Link href="/contact" legacyBehavior passHref>
+            <Link href="/#contact" legacyBehavior passHref>
               Contact
             </Link>
           </Button>
@@ -97,7 +97,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
