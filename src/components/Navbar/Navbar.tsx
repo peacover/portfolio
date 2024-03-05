@@ -63,17 +63,8 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex items-center space-x-4">
-          <Button
-            size={"lg"}
-            className={cn(
-              "hidden",
-              !isNavbarOpen ? "md:block md:text-md md:rounded-2xl" : "hidden"
-            )}
-            onClick={(e) => e.preventDefault()}
-          >
-            <Link href="/#contact" legacyBehavior passHref>
-              Contact
-            </Link>
+          <Button asChild className="hidden text-md md:block">
+            <Link href="/#contact">Contact</Link>
           </Button>
           {!isNavbarOpen && <ModeToggle />}
           <div

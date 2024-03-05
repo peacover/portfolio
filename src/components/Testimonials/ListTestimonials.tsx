@@ -19,7 +19,7 @@ const ListTestimonials = () => {
       <div className="flex justify-center">
         <Button
           asChild
-          className="p-5 mt-14 text-secondary text-white dark:text-black text-md bg-secondary rounded-full"
+          className="p-5 mt-14 text-white dark:text-black text-md bg-accent rounded-full"
           variant={"link"}
         >
           <Link href="/testimonials">

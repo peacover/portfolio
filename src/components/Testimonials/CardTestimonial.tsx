@@ -16,7 +16,9 @@ const CardTestimonial = ({ testimonial }: { testimonial: TTestimonial }) => {
           <div className="text-sm font-medium text-gray-900">
             {testimonial.name}
           </div>
-          <div className="text-sm text-gray-500">{testimonial.company}</div>
+          <div className="text-sm text-primary-foreground">
+            {testimonial.company}
+          </div>
         </div>
       </div>
     </div>

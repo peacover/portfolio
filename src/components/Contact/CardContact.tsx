@@ -31,21 +31,34 @@ const ContactCard = () => {
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <div className="space-y-2">
                 <Label htmlFor="first-name">First name</Label>
-                <Input id="first-name" placeholder="Enter your first name" />
+                <Input
+                  id="first-name"
+                  className="placeholder:text-primary placeholder:dark:text-primary-foreground"
+                  placeholder="Enter your first name"
+                />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="last-name">Last name</Label>
-                <Input id="last-name" placeholder="Enter your last name" />
+                <Input
+                  className="placeholder:text-primary placeholder:dark:text-primary-foreground"
+                  id="last-name"
+                  placeholder="Enter your last name"
+                />
               </div>
             </div>
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
-              <Input id="email" placeholder="Enter your email" type="email" />
+              <Input
+                className="placeholder:text-primary placeholder:dark:text-primary-foreground"
+                id="email"
+                placeholder="Enter your email"
+                type="email"
+              />
             </div>
             <div className="space-y-2">
               <Label htmlFor="message">Message</Label>
               <Textarea
-                className="min-h-[100px]"
+                className="min-h-[100px] placeholder:text-primary placeholder:dark:text-primary-foreground"
                 id="message"
                 placeholder="Enter your message"
               />

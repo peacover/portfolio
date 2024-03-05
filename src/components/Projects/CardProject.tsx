@@ -26,7 +26,7 @@ const CardProject = ({ project }: { project: TProject }, key: number) => {
       />
       <CardHeader className="flex flex-col flex-grow">
         <CardTitle>{project.name}</CardTitle>
-        <CardDescription>
+        <CardDescription className="text-primary dark:text-primary-foreground">
           {project.description?.slice(0, 100).concat("...")}
         </CardDescription>
       </CardHeader>
