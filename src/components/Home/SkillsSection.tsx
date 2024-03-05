@@ -16,7 +16,7 @@ const SkillsSection = () => {
                 src={skill.image}
                 width="0"
                 height="0"
-                alt={skill.title}
+                alt="Skill"
                 className="w-16 h-16"
               />
               <span className="dark:text-black">{skill.title}</span>

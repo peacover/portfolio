@@ -16,7 +16,7 @@ const CardProject = ({ project }: { project: TProject }, key: number) => {
     <Card key={key} className="flex flex-col">
       <Image
         src={project.image}
-        alt={project.name}
+        alt="Project Image"
         width="0"
         height="0"
         sizes="100vw"
@@ -36,7 +36,8 @@ const CardProject = ({ project }: { project: TProject }, key: number) => {
           variant={"link"}
           className="dark:text-white text-md font-semibold"
         >
-          <Link href={"/projects/" + project.name.toLowerCase()}>
+          <Link href={"/projects"}>
+            {/* <Link href={"/projects/" + project.name.toLowerCase()}> */}
             More Info
           </Link>
         </Button>

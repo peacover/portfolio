@@ -10,7 +10,7 @@ import Favicon from "../../public/Logos/peacover_mini_logo.svg";
 
 // const inter = Inter({ subsets: ["latin"] });
 
-const metadata: Metadata = {
+export const metadata: Metadata = {
   title: "Peacover",
   description: "Peacover - Portfolio",
   icons: [{ rel: "icon", url: Favicon.src }],

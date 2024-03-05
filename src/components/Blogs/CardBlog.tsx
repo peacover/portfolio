@@ -10,7 +10,7 @@ const CardBlog = ({ blog }: { blog: TBlog }, key: number) => {
         <CardHeader className="flex flex-col flex-grow">
           <Image
             src={blog.image}
-            alt={blog.name}
+            alt="Blog Image"
             width="0"
             height="0"
             sizes="100vw"
