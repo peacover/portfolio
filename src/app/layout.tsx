@@ -7,17 +7,16 @@ import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/utils/theme-provider";
 import ScrollToTopButton from "@/components/utils/ScrollToTopButton";
 import Favicon from "../../public/Logos/peacover_mini_logo.svg";
-import { TracingBeam } from "@/components/utils/tracing-beam";
 
 // const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "Peacover",
   description: "Peacover - Portfolio",
   icons: [{ rel: "icon", url: Favicon.src }],
 };
 
-export const fontSans = FontSans({
+const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
