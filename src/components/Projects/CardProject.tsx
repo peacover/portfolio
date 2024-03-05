@@ -38,7 +38,7 @@ const CardProject = ({ project }: { project: TProject }, key: number) => {
         >
           <Link href={"/projects"}>
             {/* <Link href={"/projects/" + project.name.toLowerCase()}> */}
-            Read More
+            Learn More
           </Link>
         </Button>
         <Button
