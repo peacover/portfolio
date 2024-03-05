@@ -5,12 +5,13 @@ import Link from "next/link";
 
 const CardBlog = ({ blog }: { blog: TBlog }, key: number) => {
   return (
-    <Link href={"/blogs/" + blog.name.toLowerCase()}>
+    // <Link href={"/blogs/" + blog.name.toLowerCase()}>
+    <Link href={"/blogs/"}>
       <Card key={key} className="flex flex-col h-full">
         <CardHeader className="flex flex-col flex-grow">
           <Image
             src={blog.image}
-            alt="Blog Image"
+            alt={blog.name.toLowerCase() + " blog"}
             width="0"
             height="0"
             sizes="100vw"
