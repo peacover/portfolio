@@ -22,7 +22,7 @@ const ListProjects = ({ path }: TProjectPath) => {
             variant={"link"}
           >
             <Link href="/projects">
-              See More
+              View All
               <FaArrowRightLong className="inline ml-2" />
             </Link>
           </Button>

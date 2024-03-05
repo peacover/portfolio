@@ -23,7 +23,7 @@ const ListTestimonials = () => {
           variant={"link"}
         >
           <Link href="/testimonials">
-            See More
+            View All
             <FaArrowRightLong className="inline ml-2" />
           </Link>
         </Button>

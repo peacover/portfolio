@@ -31,7 +31,10 @@ const HeroProfile = () => {
               <Button asChild className="p-5 text-md">
                 <Link href="/about">About</Link>
               </Button>
-              <Button variant={"secondary"} className="p-5 text-md">
+              <Button
+                variant={"secondary"}
+                className="p-5 text-md bg-profile dark:bg-secondary"
+              >
                 Download CV
               </Button>
             </div>

@@ -21,7 +21,7 @@ const ListBlogs = ({ path }: TBlogPath) => {
           variant={"link"}
         >
           <Link href="/blogs">
-            See More
+            View All
             <FaArrowRightLong className="inline ml-2" />
           </Link>
         </Button>
