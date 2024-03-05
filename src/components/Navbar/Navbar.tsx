@@ -47,11 +47,15 @@ const Navbar = () => {
           <ul className="h-screen flex flex-col justify-center lg:h-0 lg:flex-row lg:items-center">
             {NavbarItems.map((item, index) => {
               return (
-                <Link key={index} href={item.path} legacyBehavior passHref>
+                <Link
+                  key={index}
+                  href={item.path}
+                  onClick={() => setIsNavbarOpen(false)}
+                >
                   <li
                     key={index}
                     className={cn(
-                      "text-xl py-3 text-center border-b-2 rounded-md hover:bg-secondary dark:hover:bg-primary lg:border-b-0 lg:px-5",
+                      "text-xl py-3 text-center border-b-2 lg:rounded-md hover:bg-secondary dark:hover:bg-primary lg:border-b-0 lg:px-5",
                       index === 0 && isNavbarOpen ? "border-t-2" : ""
                     )}
                   >
@@ -63,8 +67,12 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex items-center space-x-4">
-          <Button asChild className="hidden text-md md:block">
-            <Link href="/#contact">Contact</Link>
+          <Button
+            className={cn(!isNavbarOpen ? "hidden text-md md:block" : "hidden")}
+          >
+            <Link href="/#contact" legacyBehavior passHref>
+              Contact
+            </Link>
           </Button>
           {!isNavbarOpen && <ModeToggle />}
           <div
