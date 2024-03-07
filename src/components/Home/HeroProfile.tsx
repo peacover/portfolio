@@ -15,7 +15,7 @@ const HeroProfileContent = {
 const HeroProfile = () => {
   return (
     <header className="p-8 mt-[8rem]">
-      <div className="container mx-auto grid h-full gap-10 min-h-[60vh] w-full grid-cols-1 items-center md:grid-cols-2">
+      <div className="lg:container mx-auto grid h-full gap-10 min-h-[60vh] w-full grid-cols-1 items-center md:grid-cols-2">
         <div className="row-start-2 md:row-auto">
           <h1
             color="blue-gray"

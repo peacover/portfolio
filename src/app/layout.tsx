@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/utils/theme-provider";
 import ScrollToTopButton from "@/components/utils/ScrollToTopButton";
 import Favicon from "../../public/Logos/peacover_mini_logo.svg";
+import { Toaster } from "sonner";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -44,6 +45,7 @@ export default function RootLayout({
           {/* <TracingBeam>{children}</TracingBeam> */}
           {children}
           <ScrollToTopButton />
+          <Toaster richColors/>
           <Footer />
         </ThemeProvider>
       </body>
