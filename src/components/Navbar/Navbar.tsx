@@ -83,6 +83,7 @@ const Navbar = () => {
               size="icon"
               variant="outline"
               className="rounded-full"
+              aria-label="Toggle menu"
             >
               {isNavbarOpen ? (
                 <Icon
