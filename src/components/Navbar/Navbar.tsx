@@ -55,10 +55,7 @@ const Navbar = () => {
                   )}
                   onClick={() => setIsNavbarOpen(false)}
                 >
-                  <Link
-                    key={index}
-                    href={item.path}
-                  >
+                  <Link key={index} href={item.path}>
                     {item.title}
                   </Link>
                 </li>
@@ -88,9 +85,19 @@ const Navbar = () => {
               className="rounded-full"
             >
               {isNavbarOpen ? (
-                <Icon icon="eva:close-fill" width={30} height={30} />
+                <Icon
+                  icon="eva:close-fill"
+                  width={30}
+                  height={30}
+                  aria-label="Close"
+                />
               ) : (
-                <Icon icon="eva:menu-fill" width={30} height={30} />
+                <Icon
+                  icon="eva:menu-fill"
+                  width={30}
+                  height={30}
+                  aria-label="Menu"
+                />
               )}
             </Button>
           </div>

@@ -8,67 +8,31 @@ import { Label } from "../ui/label";
 import { Textarea } from "../ui/textarea";
 import profile from "../../../public/Profile/youssef.png";
 import { useFormState, useFormStatus } from "react-dom";
-import { sendMessageSchema } from "@/lib/validation/sendMessageSchema";
+
+import handleSendMessage from "@/server-actions/send_message";
+import { useEffect } from "react";
 import { toast } from "sonner";
-
-type TFormState = {
-  error: string | null;
-  success: boolean;
-};
-
-const handleSendMessage = async (prevState: TFormState, formData: FormData) => {
-  const firstName = formData.get("first-name") as string;
-  const lastName = formData.get("last-name") as string;
-  const email = formData.get("email") as string;
-  const message = formData.get("message") as string;
-
-  try {
-    const parsedForm = sendMessageSchema.safeParse({
-      firstName,
-      lastName,
-      email,
-      message,
-    });
-    if (!parsedForm.success) {
-      toast.error(parsedForm.error.errors[0].message);
-      return {
-        error: parsedForm.error.errors[0].message,
-        success: false,
-      };
-    }
-    const response = await fetch("/api/send", {
-      method: "POST",
-      body: JSON.stringify(parsedForm.data),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    if (!response.ok) {
-      throw new Error("Failed to send the message");
-    }
-
-    toast.success("Message sent successfully");
-    return {
-      error: null,
-      success: true,
-    };
-  } catch (error) {
-    return {
-      error: (error as Error).message,
-      success: false,
-    };
-  }
-};
+import SubmitButton from "../ui/SubmitButton";
 
 const ContactCard = () => {
-  // const { pending } = useFormStatus();
-  const [sendMessageStatus, sendMessageAction] = useFormState(
+  const [sendMessageState, sendMessageAction] = useFormState(
     handleSendMessage,
     {
-      error: null,
-      success: false,
+      error: false,
+      message: "",
     }
   );
+
+  useEffect(() => {
+    if (sendMessageState.error) {
+      toast.error(sendMessageState.message);
+    } else if (sendMessageState.message) {
+      toast.success(sendMessageState.message);
+    }
+  }
+  , [sendMessageState.message]);
+
+
   return (
     <form
       action={sendMessageAction}
@@ -91,7 +55,7 @@ const ContactCard = () => {
             Feel free to contact me
           </h2>
         </CardHeader>
-        <CardContent className="text-black">
+        <CardContent className="text-black dark:text-white">
           <div className="space-y-4">
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <div className="space-y-2">
@@ -132,11 +96,10 @@ const ContactCard = () => {
                 placeholder="Enter your message"
               />
             </div>
-            {/* <Button type="submit" disabled={pending}> */}
-            <Button type="submit">
-              Send message
-              {/* {pending ? "Sending..." : "Send message"} */}
-            </Button>
+            {/* <Button type="submit" disabled={pending}>
+              {pending ? "Sending..." : "Send message"}
+            </Button> */}
+            <SubmitButton />
           </div>
         </CardContent>
       </Card>
