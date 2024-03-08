@@ -11,17 +11,19 @@ const CardBlog = ({ blog }: { blog: TBlog }, key: number) => {
         <CardHeader className="flex flex-col flex-grow">
           <Image
             src={blog.image}
-            alt="blog image"
+            alt={blog.name + " image"}
             width="0"
             height="0"
             sizes="100vw"
             className="w-full object-cover"
             priority={true}
-            aria-label={blog.name}
+            aria-label={blog.name + " image"}
           />
         </CardHeader>
         <CardFooter className="flex justify-between mt-auto">
-          <CardTitle>{blog.name}</CardTitle>
+          <span className="text-2xl font-bold text-primary dark:text-white">
+            {blog.name}
+          </span>
         </CardFooter>
       </Card>
     </Link>

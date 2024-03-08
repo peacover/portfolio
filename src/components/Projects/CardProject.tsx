@@ -16,16 +16,16 @@ const CardProject = ({ project }: { project: TProject }, key: number) => {
     <Card key={key} className="flex flex-col">
       <Image
         src={project.image}
-        alt="project image"
+        alt={project.name + " image"}
         width="0"
         height="0"
         sizes="100vw"
         className="w-full rounded-t-md object-cover"
         priority={true}
-        aria-label={project.name}
+        aria-label={project.name + " image"}
       />
       <CardHeader className="flex flex-col flex-grow">
-        <span className="text-2xl font-bold text-primary dark:text-primary-foreground">
+        <span className="text-2xl font-bold text-primary dark:text-white">
           {project.name}
         </span>
         <CardDescription className="text-primary dark:text-primary-foreground">
@@ -40,7 +40,7 @@ const CardProject = ({ project }: { project: TProject }, key: number) => {
         >
           <Link href={"/projects"}>
             {/* <Link href={"/projects/" + project.name.toLowerCase()}> */}
-            Learn More
+            About
           </Link>
         </Button>
         <Button
