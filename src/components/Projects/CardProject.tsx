@@ -25,7 +25,9 @@ const CardProject = ({ project }: { project: TProject }, key: number) => {
         aria-label={project.name}
       />
       <CardHeader className="flex flex-col flex-grow">
-        <CardTitle>{project.name}</CardTitle>
+        <span className="text-2xl font-bold text-primary dark:text-primary-foreground">
+          {project.name}
+        </span>
         <CardDescription className="text-primary dark:text-primary-foreground">
           {project.description?.slice(0, 100).concat("...")}
         </CardDescription>
