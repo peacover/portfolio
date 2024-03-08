@@ -44,11 +44,11 @@ const Navbar = () => {
               : "hidden lg:block lg:pb-0 lg:mt-0"
           )}
         >
-          <ul className="h-screen flex flex-col justify-center lg:h-0 lg:flex-row lg:items-center">
+          <div className="h-screen flex flex-col justify-center lg:h-0 lg:flex-row lg:items-center">
             {NavbarItems.map((item, index) => {
               return (
                 <Link key={index} href={item.path}>
-                  <li
+                  <div
                     key={index}
                     className={cn(
                       "text-xl py-3 text-center border-b-2 lg:rounded-md hover:bg-secondary dark:hover:bg-primary lg:border-b-0 lg:px-5",
@@ -57,11 +57,11 @@ const Navbar = () => {
                     onClick={() => setIsNavbarOpen(false)}
                   >
                     {item.title}
-                  </li>
+                  </div>
                 </Link>
               );
             })}
-          </ul>
+          </div>
         </div>
         <div className="flex items-center space-x-4">
           <Button

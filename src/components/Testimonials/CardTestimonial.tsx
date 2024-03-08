@@ -8,7 +8,7 @@ const CardTestimonial = ({
   key: number;
 }) => {
   return (
-    <li
+    <div
       key={key}
       className="flex flex-col gap-4 bg-primary dark:bg-secondary p-4 rounded-md"
     >
@@ -26,7 +26,7 @@ const CardTestimonial = ({
           </span>
         </span>
       </div>
-    </li>
+    </div>
   );
 };
 

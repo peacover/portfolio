@@ -30,11 +30,11 @@ const ListTestimonials = ({ path }: TTestimonialPath) => {
       </div>
     </div>
   ) : (
-    <ul className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {testimonials.map((testimonial, index) => {
         return <CardTestimonial key={index} testimonial={testimonial} />;
       })}
-    </ul>
+    </div>
   );
 };
 
