@@ -1,13 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "../ui/button";
 import { Card, CardContent, CardHeader } from "../ui/card";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 import { Textarea } from "../ui/textarea";
 import profile from "../../../public/Profile/youssef.png";
-import { useFormState, useFormStatus } from "react-dom";
+import { useFormState } from "react-dom";
 
 import handleSendMessage from "@/server-actions/send_message";
 import { useEffect } from "react";
@@ -65,6 +64,7 @@ const ContactCard = () => {
                   name="first-name"
                   className="placeholder:text-primary placeholder:dark:text-primary-foreground"
                   placeholder="Enter your first name"
+                  autoComplete="given-name"
                 />
               </div>
               <div className="space-y-2">
@@ -74,6 +74,7 @@ const ContactCard = () => {
                   id="last-name"
                   name="last-name"
                   placeholder="Enter your last name"
+                  autoComplete="family-name"
                 />
               </div>
             </div>
@@ -85,6 +86,7 @@ const ContactCard = () => {
                 name="email"
                 placeholder="Enter your email"
                 type="email"
+                autoComplete="email"
               />
             </div>
             <div className="space-y-2">
@@ -94,11 +96,9 @@ const ContactCard = () => {
                 id="message"
                 name="message"
                 placeholder="Enter your message"
+                autoComplete="off"
               />
             </div>
-            {/* <Button type="submit" disabled={pending}>
-              {pending ? "Sending..." : "Send message"}
-            </Button> */}
             <SubmitButton />
           </div>
         </CardContent>

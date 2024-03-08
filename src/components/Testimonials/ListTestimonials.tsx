@@ -1,15 +1,15 @@
 "use client";
 
-import CardTestimonial from "./CardTestimonial";
-// import { testimonials } from "@/lib/constants/testimonials";
 import { InfiniteMovingCards } from "../utils/infinite-moving-cards";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { testimonials } from "@/lib/constants/testimonials";
+import { TTestimonialPath } from "@/lib/types/TTestimonial";
+import CardTestimonial from "./CardTestimonial";
 
-const ListTestimonials = () => {
-  return (
+const ListTestimonials = ({ path }: TTestimonialPath) => {
+  return path === "Home" ? (
     <div className="h-[25rem] rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
       <InfiniteMovingCards
         items={testimonials}
@@ -29,6 +29,12 @@ const ListTestimonials = () => {
         </Button>
       </div>
     </div>
+  ) : (
+    <ul className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {testimonials.map((testimonial, index) => {
+        return <CardTestimonial key={index} testimonial={testimonial} />;
+      })}
+    </ul>
   );
 };
 

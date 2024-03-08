@@ -47,18 +47,18 @@ const Navbar = () => {
           <ul className="h-screen flex flex-col justify-center lg:h-0 lg:flex-row lg:items-center">
             {NavbarItems.map((item, index) => {
               return (
-                <li
-                  key={index}
-                  className={cn(
-                    "text-xl py-3 text-center border-b-2 lg:rounded-md hover:bg-secondary dark:hover:bg-primary lg:border-b-0 lg:px-5",
-                    index === 0 && isNavbarOpen ? "border-t-2" : ""
-                  )}
-                  onClick={() => setIsNavbarOpen(false)}
-                >
-                  <Link key={index} href={item.path}>
+                <Link key={index} href={item.path}>
+                  <li
+                    key={index}
+                    className={cn(
+                      "text-xl py-3 text-center border-b-2 lg:rounded-md hover:bg-secondary dark:hover:bg-primary lg:border-b-0 lg:px-5",
+                      index === 0 && isNavbarOpen ? "border-t-2" : ""
+                    )}
+                    onClick={() => setIsNavbarOpen(false)}
+                  >
                     {item.title}
-                  </Link>
-                </li>
+                  </li>
+                </Link>
               );
             })}
           </ul>

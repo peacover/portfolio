@@ -8,7 +8,6 @@ const projects = () => {
       </h1>
       <ListProjects path="Projects" />
     </div>
-    
   );
 };
 

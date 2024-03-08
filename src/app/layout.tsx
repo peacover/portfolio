@@ -9,8 +9,6 @@ import ScrollToTopButton from "@/components/utils/ScrollToTopButton";
 import Favicon from "../../public/Logos/peacover_mini_logo.svg";
 import { Toaster } from "sonner";
 
-// const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
   title: "Peacover",
   description: "Peacover - Portfolio",
@@ -30,10 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={cn(
-          "bg-background font-sans antialiased",
-          fontSans.variable
-        )}
+        className={cn("bg-background font-sans antialiased", fontSans.variable)}
       >
         <ThemeProvider
           attribute="class"
@@ -42,10 +37,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          {/* <TracingBeam>{children}</TracingBeam> */}
           {children}
           <ScrollToTopButton />
-          <Toaster richColors/>
+          <Toaster richColors />
           <Footer />
         </ThemeProvider>
       </body>

@@ -1,15 +1,10 @@
-import Image from "next/image";
-import Link from "next/link";
-
 const Footer = () => {
   return (
-    <footer>
-      <div className="bg-primary/10 dark:bg-primary py-8 bottom-0 w-full">
-        <p className="text-center text-primary dark:text-white">
-          © 2024 - Developed by
-          <span className="font-semibold"> Peacover </span>- All rights reserved
-        </p>
-      </div>
+    <footer className="bg-primary/10 dark:bg-primary py-8 bottom-0">
+      <p className="text-center text-sm text-primary dark:text-white md:text-base">
+        © 2024 - Developed by
+        <span className="font-semibold"> Peacover </span>- All rights reserved
+      </p>
     </footer>
   );
 };

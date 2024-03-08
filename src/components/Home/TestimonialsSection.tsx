@@ -4,7 +4,7 @@ import SectionWrapper from "../utils/SectionWrapper";
 const TestimonialsSection = () => {
   return (
     <SectionWrapper title="Testimonials" className="bg-secondary-foreground">
-      <ListTestimonials />
+      <ListTestimonials path="Home"/>
     </SectionWrapper>
   );
 };
