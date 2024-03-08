@@ -16,7 +16,7 @@ const CardProject = ({ project }: { project: TProject }, key: number) => {
     <Card key={key} className="flex flex-col">
       <Image
         src={project.image}
-        alt={project.name.toLowerCase() + " project"}
+        alt="project image"
         width="0"
         height="0"
         sizes="100vw"
