@@ -5,8 +5,7 @@ import Link from "next/link";
 
 const CardBlog = ({ blog }: { blog: TBlog }, key: number) => {
   return (
-    // <Link href={"/blogs/" + blog.name.toLowerCase()}>
-    <Link href={"/blogs/"}>
+    <Link href={"/blogs/" + blog.name.toLowerCase().replaceAll(" ", "-")}>
       <Card key={key} className="flex flex-col h-full">
         <CardHeader className="flex flex-col flex-grow">
           <Image

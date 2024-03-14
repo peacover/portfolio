@@ -38,8 +38,9 @@ const CardProject = ({ project }: { project: TProject }, key: number) => {
           variant={"link"}
           className="dark:text-white text-md font-semibold"
         >
-          <Link href={"/projects"}>
-            {/* <Link href={"/projects/" + project.name.toLowerCase()}> */}
+          <Link
+            href={"/projects/" + project.name.toLowerCase().replaceAll(" ", "-")}
+          >
             About
           </Link>
         </Button>
