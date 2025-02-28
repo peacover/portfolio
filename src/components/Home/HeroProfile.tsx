@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const HeroProfileContent = {
-  title: "Welcome to my Web Development Portofolio!",
+  title: "Explore My Software Engineering Journey",
   description:
-    "I'm Youssef ER-RAKI, a dedicated Junior Software Engineer based in Morocco.\
+    "I'm Youssef ER-RAKI, a dedicated Software Engineer based in Morocco.\
     I love solving problems, collaborating with great minds, and paying attention to details.\
     Eager to enhance my skills, unafraid of learning, and enthusiastic about connecting with \
     like-minded professionals. Let's grow together!",

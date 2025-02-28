@@ -1,5 +1,7 @@
 export type TBlog = {
+  id: number;
   name: string;
+  slug: string;
   description: string;
   image: string;
   images: string[];

@@ -3,10 +3,13 @@ import { Card, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import Image from "next/image";
 import Link from "next/link";
 
-const CardBlog = ({ blog }: { blog: TBlog }, key: number) => {
+interface ICardBlog {
+  blog: TBlog;
+}
+const CardBlog = ({ blog }: ICardBlog) => {
   return (
     <Link href={"/blogs/" + blog.name.toLowerCase().replaceAll(" ", "-")}>
-      <Card key={key} className="flex flex-col h-full">
+      <Card className="flex flex-col h-full">
         <CardHeader className="flex flex-col flex-grow">
           <Image
             src={blog.image}

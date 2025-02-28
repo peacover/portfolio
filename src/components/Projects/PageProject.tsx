@@ -27,15 +27,17 @@ const PageProject = ({ project }: { project: TProject }) => {
           ))}
         </ul>
         <div className="flex justify-center gap-4 mt-4">
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              className="text-lg font-semibold text-primary dark:text-white"
+            >
+              Visit
+            </a>
+          )}
           <a
-            href={project.link}
-            target="_blank"
-            className="text-lg font-semibold text-primary dark:text-white"
-          >
-            Visit
-          </a>
-          <a
-            href={project.link}
+            href={project.github}
             target="_blank"
             className="text-lg font-semibold text-primary dark:text-white"
           >

@@ -6,15 +6,13 @@ import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 import { Textarea } from "../ui/textarea";
 import profile from "../../../public/Profile/youssef.png";
-import { useFormState } from "react-dom";
-
 import handleSendMessage from "@/server-actions/send_message";
-import { useEffect } from "react";
+import { useActionState, useEffect } from "react";
 import { toast } from "sonner";
 import SubmitButton from "../ui/SubmitButton";
 
 const ContactCard = () => {
-  const [sendMessageState, sendMessageAction] = useFormState(
+  const [sendMessageState, sendMessageAction] = useActionState(
     handleSendMessage,
     {
       error: false,
@@ -30,7 +28,6 @@ const ContactCard = () => {
     }
   }
   , [sendMessageState.message]);
-
 
   return (
     <form

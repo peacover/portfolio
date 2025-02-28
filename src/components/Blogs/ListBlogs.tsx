@@ -11,7 +11,7 @@ const ListBlogs = ({ path }: TBlogPath) => {
       <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {blogs.map((blog, index) => {
           if (index > 2 && path === "Home") return null;
-          return <CardBlog key={index} blog={blog} />;
+          return <CardBlog key={blog.id} blog={blog} />;
         })}
       </div>
       <div className="flex justify-center">

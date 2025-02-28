@@ -11,9 +11,12 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import Link from "next/link";
 
-const CardProject = ({ project }: { project: TProject }, key: number) => {
+interface ICardProject {
+  project: TProject;
+}
+const CardProject = ({ project }: ICardProject) => {
   return (
-    <Card key={key} className="flex flex-col">
+    <Card className="flex flex-col">
       <Image
         src={project.image}
         alt={project.name + " image"}
@@ -39,7 +42,9 @@ const CardProject = ({ project }: { project: TProject }, key: number) => {
           className="dark:text-white text-md font-semibold"
         >
           <Link
-            href={"/projects/" + project.name.toLowerCase().replaceAll(" ", "-")}
+            href={
+              "/projects/" + project.name.toLowerCase().replaceAll(" ", "-")
+            }
           >
             About
           </Link>
@@ -49,9 +54,11 @@ const CardProject = ({ project }: { project: TProject }, key: number) => {
           variant={"link"}
           className="dark:text-white text-md font-semibold"
         >
-          <Link href={project.link} target="_blank">
-            Visit
-          </Link>
+          {project.link && (
+            <Link href={project.link} target="_blank">
+              Visit
+            </Link>
+          )}
         </Button>
       </CardFooter>
     </Card>
